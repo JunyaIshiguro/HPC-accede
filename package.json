@@ -1,0 +1,19 @@
+{
+  "name": "hpc-accede_srv",
+  "version": "1.0.0",
+  "main": "hpcsrv.js",
+  "scripts": {
+    "start": "node hpcsrv.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "obniz": "^3.10.1"
+  },
+  "devDependencies": {},
+  "description": ""
+}
