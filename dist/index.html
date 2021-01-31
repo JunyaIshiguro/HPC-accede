@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ja" >
+<head>
+  <meta charset="UTF-8">
+  <title>HPC-accede</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1"><link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css'>
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!-- 全体をVue.js有効にする -->
+<div id="app" class="container text-white bg-dark p-1">
+
+  <!-- タイトル -->
+  <div class="row text-center">
+    <div class="col-sm-6 mx-auto"><h1>HPC-accede</h1></div>
+  </div>
+  <!-- 設定 -->
+  <div class="form-group my-3 mx-4">
+    <div class="border-bottom col-sm-12"><h5>Obniz ID</h5></div>
+  </div>
+  <div class="form-group form-inline my-3 mx-5">
+    <input v-model="ObnizID[0]" class="form-control" type="text" maxlength="4" style="width:80px;">
+    <label class="control-label mx-2">-</label>
+    <input v-model="ObnizID[1]" class="form-control" type="text" maxlength="4" style="width:80px;">  
+  </div>
+
+  <!-- 即時電源ONボタン -->
+  <div class="form-group my-3 mx-4">
+    <div class="border-bottom col-sm-12"><h5>即時起動</h5></div>
+  </div>
+  <div class="form-group my-3 mx-5">
+    <button v-on:click="PowerON" class="btn btn-success" style="width:110px;">電源ON</button>
+  </div>
+
+  <!-- 曜日指定 -->
+  <div class="form-group my-3 mx-4">
+    <div class="border-bottom col-sm-12"><h5>曜日別時間設定</h5></div>
+  </div>
+  <div class="form-group form-inline col-sm-12">
+    <!-- 日曜 -->
+    <div class="form-inline col-sm-4 mb-2">
+      <label class="control-label mx-3">日曜：</label>
+      <input v-model="WeekTime['Sun']" class="form-control" type="time" style="width:110px;">
+    </div>
+    <!-- 月曜 -->
+    <div class="form-inline col-sm-4 mb-2">
+      <label class="control-label mx-3">月曜：</label>
+      <input v-model="WeekTime['Mon']" class="form-control" type="time" style="width:110px;">
+    </div>
+    <!-- 火曜 -->
+    <div class="form-inline col-sm-4 mb-2">
+      <label class="control-label mx-3">火曜：</label>
+      <input v-model="WeekTime['Tue']" class="form-control" type="time" style="width:110px;">
+    </div>
+    <!-- 水曜 -->
+    <div class="form-inline col-sm-4 mb-2">
+      <label class="control-label mx-3">水曜：</label>
+      <input v-model="WeekTime['Wed']" class="form-control" type="time" style="width:110px;">
+    </div>
+    <!-- 木曜 -->
+    <div class="form-inline col-sm-4 mb-2">
+      <label class="control-label mx-3">木曜：</label>
+      <input v-model="WeekTime['Thu']" class="form-control" type="time" style="width:110px;">
+    </div>
+    <!-- 金曜 -->
+    <div class="form-inline col-sm-4 mb-2">
+      <label class="control-label mx-3">金曜：</label>
+      <input v-model="WeekTime['Fri']" class="form-control" type="time" style="width:110px;">
+    </div>
+    <!-- 土曜 -->
+    <div class="form-inline col-sm-4 mb-2">
+      <label class="control-label mx-3">土曜：</label>
+      <input v-model="WeekTime['Sat']" class="form-control" type="time" style="width:110px;">
+    </div>
+  </div>
+  
+  <!--設定保存ボタン-->
+  <div class="form-group my-3 mx-5">
+    <button v-on:click="ApplySettings" class="btn btn-success" style="width:110px;">設定保存</button>
+  </div>
+  
+</div>
+
+<!-- partial -->
+<script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/js/bootstrap.min.js'></script>
+<script src='https://unpkg.com/obniz@3.9.0/obniz.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/firebase/8.0.1/firebase.js'></script>
+<script src="./script.js"></script>
+
+</body>
+</html>
