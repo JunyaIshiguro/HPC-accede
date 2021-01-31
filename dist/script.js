@@ -1,11 +1,11 @@
 // Your web app's Firebase configuration
 var firebaseConfig = {
-  apiKey: "AIzaSyCLQtAqOIiq2Sv5GqRdFLsgbiYu-A6JGwM",
-  authDomain: "hpc00-4b9f7.firebaseapp.com",
-  projectId: "hpc00-4b9f7",
-  storageBucket: "hpc00-4b9f7.appspot.com",
-  messagingSenderId: "238512444466",
-  appId: "1:238512444466:web:def303ef383f94e8eb182b"
+  apiKey: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+  authDomain: "hpc00-00000.firebaseapp.com",
+  projectId: "hpc00-00000",
+  storageBucket: "hpc00-00000.appspot.com",
+  messagingSenderId: "000000000000",
+  appId: "1:000000000000:web:xxxxxxxxxxxxxxxxxxxxxx"
 };
 
 // Initialize Firebase
